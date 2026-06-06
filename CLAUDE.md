@@ -9,7 +9,7 @@
 |---|---|
 | Site name | Kansai Karate Willawong — Landing Page |
 | Domain | kansaikaratewillawong.com.au |
-| Live URL | (Vercel preview URL — update when deployed) |
+| Live URL | https://kkw-landing.vercel.app |
 | Local path | `C:\Users\micha\Claude-Projects\kkw-landing` |
 | Stack | Next.js 16, Tailwind CSS v4, TypeScript |
 | Hosting | Vercel (auto-deploys on `git push` to `main`) |
