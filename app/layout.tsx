@@ -1,30 +1,33 @@
 import type { Metadata } from "next";
-import { Oswald, Source_Sans_3 } from "next/font/google";
+import { Montserrat, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import StickyHeader from "@/components/StickyHeader";
 
-const oswald = Oswald({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-oswald",
+  variable: "--font-montserrat",
+  weight: ["400", "600", "700", "800", "900"],
   display: "swap",
 });
 
-const sourceSans = Source_Sans_3({
+// Barlow Condensed is the closest modern match to the original Open Sans Condensed
+const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-open-sans-condensed",
+  weight: ["700", "800", "900"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Kansai Karate Willawong | Book a Free Trial Class",
+  title: "Kansai Karate Willawong | 2 Weeks Training + Free Uniform — Only $39",
   description:
-    "Traditional Shitoryu Shukokai karate for families in Willawong. Led by Sensei Allan Reyes (Sandan). Cubs, Little Lions, Juniors and Adults & Teens. Book your free trial today.",
+    "Introductory special: 2 weeks training + free uniform for only $39. Traditional Shitoryu Shukokai karate in Willawong. Led by Sensei Allan Reyes (Sandan). Cubs, Little Lions, Juniors, Adults & Teens.",
   keywords:
-    "karate willawong, kids karate brisbane south, martial arts willawong, karate classes willawong, free trial karate",
+    "karate willawong, kids karate brisbane south, martial arts willawong, karate classes willawong, free karate trial, karate acacia ridge, karate calamvale, karate inala, karate forest lake",
   openGraph: {
-    title: "Kansai Karate Willawong | Book a Free Trial Class",
+    title: "Kansai Karate Willawong | 2 Weeks Training + Free Uniform — Only $39",
     description:
-      "Traditional Shitoryu Shukokai karate for families in Willawong. Led by Sensei Allan Reyes (Sandan). Book your free trial today.",
+      "Introductory special: 2 weeks training + free uniform for only $39. Traditional Shitoryu Shukokai karate in Willawong.",
     url: "https://kansaikaratewillawong.com.au",
     siteName: "Kansai Karate Willawong",
     locale: "en_AU",
@@ -37,7 +40,7 @@ const localBusinessSchema = {
   "@type": "SportsActivityLocation",
   name: "Kansai Karate Willawong",
   description:
-    "Traditional Japanese karate for kids, teens and adults in Willawong QLD.",
+    "Traditional Shitoryu Shukokai karate for families in Willawong QLD. Programs for all ages from 3 years.",
   url: "https://kansaikaratewillawong.com.au",
   telephone: "+61421366355",
   address: {
@@ -62,7 +65,7 @@ const localBusinessSchema = {
       closes: "12:00",
     },
   ],
-  image: "https://www.kansaikaratewillawong.com.au/images/logo.png",
+  image: "https://www.kansaikaratewillawong.com.au/images/kkw-logo.webp",
   sameAs: [
     "https://www.facebook.com/kansaikaratewillawong",
     "https://www.instagram.com/kansaikaratewillawong",
@@ -75,7 +78,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${oswald.variable} ${sourceSans.variable}`}>
+    <html
+      lang="en"
+      className={`${montserrat.variable} ${barlowCondensed.variable}`}
+    >
       <head>
         <script
           type="application/ld+json"

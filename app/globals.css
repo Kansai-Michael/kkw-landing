@@ -2,35 +2,87 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0f172a;
-  --kkw-blue: #5B7DB1;
-  --kkw-blue-dark: #4A6DA0;
-  --kkw-yellow: #FFB800;
-  --kkw-yellow-dark: #E6A500;
-  --kkw-navy: #001040;
+  --foreground: #040404;
+  --kkw-red: #dd3333;
+  --kkw-red-dark: #bb2222;
+  --kkw-navy: #243673;
+  --kkw-navy-dark: #1a2855;
+  --kkw-black: #040404;
+  --kkw-dark: #0d0d0d;
+  --kkw-gray: #383838;
+  --kkw-light-blue: #BFD1FF;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-kkw-blue: var(--kkw-blue);
-  --color-kkw-blue-dark: var(--kkw-blue-dark);
-  --color-kkw-yellow: var(--kkw-yellow);
-  --color-kkw-yellow-dark: var(--kkw-yellow-dark);
+  --color-kkw-red: var(--kkw-red);
+  --color-kkw-red-dark: var(--kkw-red-dark);
   --color-kkw-navy: var(--kkw-navy);
+  --color-kkw-navy-dark: var(--kkw-navy-dark);
+  --color-kkw-black: var(--kkw-black);
+  --color-kkw-dark: var(--kkw-dark);
+  --color-kkw-gray: var(--kkw-gray);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-body), system-ui, sans-serif;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-weight: 600;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-oswald), var(--font-body), system-ui, sans-serif;
-  letter-spacing: 0.02em;
+  font-family: var(--font-open-sans-condensed), var(--font-montserrat), system-ui, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Section number prefix style */
+.section-prefix {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kkw-red);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Form inputs */
+.kkw-input {
+  display: block;
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #040404;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.kkw-input:focus {
+  border-color: #243673;
+  background: #fff;
+}
+.kkw-input::placeholder {
+  color: #aaa;
+  font-weight: 400;
+}
+
+/* Checkbox style */
+.kkw-checkbox {
+  accent-color: #dd3333;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
 }
